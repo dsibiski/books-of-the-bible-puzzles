@@ -82,7 +82,7 @@ const solve = puzzle => {
     return found;
 };
 
-(async function() {
+(function() {
     PUZZLES.forEach((puzzle, index) => {
         const foundBooks = solve(puzzle);
 
