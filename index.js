@@ -66,8 +66,10 @@ const PUZZLE_2 =
 
 const PUZZLES = [PUZZLE, PUZZLE_2];
 
+const removeAllPunctuationAndSpaces = string => string.replace(/ |\.|,|"|'/g, '');
+
 const solve = puzzle => {
-    const simplifiedPuzzle = puzzle.replace(/ |\.|,|"|'/g, '').toLowerCase();
+    const simplifiedPuzzle = removeAllPunctuationAndSpaces(puzzle).toLowerCase();
 
     let found = [];
 
